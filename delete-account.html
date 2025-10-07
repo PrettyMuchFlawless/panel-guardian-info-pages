@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion Instructions</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Use Inter font for a clean, modern look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        /* Custom class for the circled screenshot effect (optional, relies on placeholder text here) */
+        .step-image {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .step-image:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden p-6 md:p-10">
+
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-indigo-700 mb-2">
+                How to Delete Your Account
+            </h1>
+            <p class="text-lg text-gray-600">
+                Follow these simple steps to permanently delete your account and associated data.
+            </p>
+        </header>
+
+        <!-- Step 1: Accessing Settings -->
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8 mb-12 border-b pb-12">
+            <div class="lg:w-1/2">
+                <div class="flex items-start mb-4">
+                    <span class="text-4xl font-bold text-indigo-500 mr-4">1</span>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-gray-800">
+                            Navigate to Account Settings
+                        </h2>
+                        <p class="mt-2 text-gray-600">
+                            Open the app and locate the **Settings** tab. This is the gear icon in the bottom right hand corner.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 w-full">
+                <img
+                    src="/5a617181019d08a4017034c7c3b6fb410ee2548431bb0228638680fa112253be.png"
+                    alt="Screenshot showing the Settings tab circled"
+                    class="step-image w-full rounded-lg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/3B82F6/ffffff?text=Image+Load+Failed';"
+                >
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row-reverse items-center justify-between gap-8">
+            <div class="lg:w-1/2">
+                <div class="flex items-start mb-4">
+                    <span class="text-4xl font-bold text-indigo-500 mr-4">2</span>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-gray-800">
+                            Confirm Account Deletion
+                        </h2>
+                        <p class="mt-2 text-gray-600">
+                            Within the settings menu, find the **Delete Account** button.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 w-full">
+                <img
+                    src="/settings-screen.png"
+                    alt="Screenshot showing the Delete Account button"
+                    class="step-image w-full rounded-lg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/EF4444/ffffff?text=Image+Load+Failed';"
+                >
+            </div>
+        </div>
+
+        <!-- Important Note -->
+        <footer class="mt-12 p-5 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
+            <p class="font-semibold text-yellow-800">Important:</p>
+            <p class="text-sm text-yellow-700 mt-1">
+                Deleting your account is permanent and will remove all associated data, including progress, purchased items, and profile information.
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
