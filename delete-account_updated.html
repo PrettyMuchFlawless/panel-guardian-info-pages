@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Guardian Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen p-4"
+  >
+    <div class="max-w-3xl w-full bg-white rounded-xl shadow-2xl p-8 md:p-12">
+      <header class="text-center mb-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-2">
+          Panel Guardian
+        </h1>
+        <h2 class="text-2xl font-semibold text-gray-700">Privacy Policy</h2>
+        <p class="text-sm text-gray-500 mt-2">Last Updated: August 9, 2025</p>
+      </header>
+
+      <!-- Account deletion request box -->
+      <section
+        class="mb-10 border-2 border-red-200 bg-red-50 rounded-xl p-6 shadow-sm"
+        aria-labelledby="deletion-heading"
+      >
+        <h3
+          id="deletion-heading"
+          class="text-2xl font-bold text-red-700 mb-3"
+        >
+          Account Deletion Request
+        </h3>
+
+        <p class="text-sm text-red-800 font-semibold mb-4">
+          Warning: Account deletion is a serious action and may permanently
+          remove your access to Panel Guardian services, settings, device
+          associations, and account-related records.
+        </p>
+
+        <div class="space-y-3 mb-5 text-sm text-gray-700">
+          <div class="p-3 rounded-lg bg-white border border-red-200">
+            <strong class="text-red-700">Important Notice:</strong> Only submit
+            this request if you are the authorized owner of the account.
+          </div>
+          <div class="p-3 rounded-lg bg-white border border-yellow-300">
+            <strong class="text-yellow-700">Deletion Notice:</strong> After a
+            deletion request is submitted, account review and processing may
+            take time. Additional verification may be required before deletion
+            is completed.
+          </div>
+          <div class="p-3 rounded-lg bg-white border border-red-200">
+            <strong class="text-red-700">Permanent Deletion Warning:</strong>
+            Deleted account information may not be recoverable once processing
+            is complete.
+          </div>
+          <div class="p-3 rounded-lg bg-white border border-orange-300">
+            <strong class="text-orange-700">Please Review Carefully:</strong>
+            Make sure your username is entered correctly before submitting this
+            request.
+          </div>
+        </div>
+
+        <form id="deletionForm" class="space-y-4" novalidate>
+          <div>
+            <label
+              for="username"
+              class="block text-sm font-semibold text-gray-700 mb-2"
+            >
+              Username
+            </label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              autocomplete="username"
+              placeholder="Enter your username"
+              required
+              aria-describedby="usernameHelp usernameError"
+              class="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+            />
+            <p id="usernameHelp" class="text-sm text-gray-500 mt-2">
+              Enter the exact username associated with the account you want to
+              delete.
+            </p>
+            <p
+              id="usernameError"
+              class="hidden mt-2 text-sm text-red-700 font-medium"
+              role="alert"
+            >
+              Please enter your username before sending a deletion request.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button
+              type="submit"
+              class="inline-flex items-center justify-center rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-3 transition"
+            >
+              Send Deletion Request
+            </button>
+          </div>
+        </form>
+
+        <div
+          id="requestMessage"
+          class="hidden mt-5 rounded-lg border border-blue-200 bg-blue-50 p-4 text-blue-900"
+          role="alert"
+          aria-live="polite"
+        >
+          <p class="font-bold mb-2">
+            We are working on deleting the account, please follow the steps
+            below.
+          </p>
+          <ol class="list-decimal pl-5 space-y-2 text-sm">
+            <li>Watch your email for any follow-up verification requests.</li>
+            <li>Do not create a replacement account until deletion is complete.</li>
+            <li>
+              Keep access to your registered email or phone number in case
+              identity confirmation is needed.
+            </li>
+            <li>
+              Device and monitoring history linked to the account may be removed
+              as part of the deletion process.
+            </li>
+            <li>
+              If you submitted this request by mistake, contact support
+              immediately.
+            </li>
+          </ol>
+
+          <div class="mt-4 space-y-2 text-sm">
+            <p class="font-semibold text-red-700">
+              Final Warning: This request may lead to permanent loss of account
+              access and associated data.
+            </p>
+            <p class="font-semibold text-red-700">
+              Deletion Notice: Processing times may vary, and some information
+              may be retained where required by law, security, fraud prevention,
+              or operational recordkeeping.
+            </p>
+            <p class="font-semibold text-red-700">
+              Account Owner Notice: Unauthorized deletion requests are strictly
+              prohibited.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <main class="space-y-8 prose prose-blue max-w-none">
+        <p class="text-lg text-gray-600">
+          This Privacy Policy describes how Panel Guardian ("we," "us," or
+          "our") collects, uses, and discloses information in connection with
+          your use of the Panel Guardian mobile application ("the App").
+        </p>
+        <p class="text-lg text-gray-600">
+          We take your privacy very seriously. Our App is designed solely to
+          display data from your connected panel system.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-700">
+          1. Information We Collect
+        </h3>
+        <p>The App does not collect any personal information from you.</p>
+        <p>
+          All panel status updates, sensor readings originate from your IoT
+          device.
+        </p>
+        <p>
+          That data is transmitted by your device to our backend on AWS. The App
+          fetches this information securely from AWS and displays it to you.
+        </p>
+        <p>
+          The App may require access to your local network to establish outbound
+          HTTPS connections to AWS. No data is sent directly to us from within
+          the App.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-700">
+          2. How We Use Information
+        </h3>
+        <p>
+          We use the data retrieved from AWS only to present real-time status
+          and historical readings of your panel system.
+        </p>
+        <p>
+          We do not analyze, aggregate, or share your data for any other
+          purpose.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-700">
+          3. Data Storage and Security
+        </h3>
+        <p>
+          Your IoT device pushes data to our AWS infrastructure. That data is
+          stored in encrypted form at rest.
+        </p>
+        <p>All communications between the App and AWS occur over HTTPS/TLS.</p>
+
+        <h3 class="text-2xl font-bold text-gray-700">
+          4. SMS Notifications and Phone Number Privacy
+        </h3>
+        <p>
+          When you opt in to receive SMS notifications by providing your mobile
+          phone number and checking the consent checkbox during account
+          creation, we collect only your phone number for the purpose of sending
+          Panel Guardian device alerts.
+        </p>
+        <p>
+          We do <strong>not</strong> share, sell, rent, distribute, or trade
+          your phone number or SMS opt-in consent data with any third parties
+          for marketing, advertising, or any other purpose. Your phone number is
+          used solely to deliver transactional alerts from the Panel Guardian
+          service and will never be shared with affiliates or third parties
+          except as required by law.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-700">
+          5. Third-Party Services
+        </h3>
+        <p>
+          We rely on Amazon Web Services (AWS) to host, store, and serve your
+          panel data.
+        </p>
+        <p>
+          The App does not use any third-party analytics, advertising, or
+          data-collection services.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-700">6. Your Consent</h3>
+        <p>
+          By using the Panel Guardian App, you consent to this Privacy Policy.
+          If you do not agree with these terms, please discontinue use of the
+          App.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-700">
+          7. Changes to this Privacy Policy
+        </h3>
+        <p>
+          We may update this Privacy Policy from time to time. We will notify
+          you of significant changes by posting the new Privacy Policy within
+          the App or on our website. You are advised to review this Policy
+          periodically.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-700">8. Contact Us</h3>
+        <p>
+          If you have any questions or suggestions about our Privacy Policy,
+          please contact us at:
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a
+            href="mailto:panelguardianalerts@gmail.com"
+            class="text-blue-600 hover:underline"
+            >panelguardianalerts@gmail.com</a
+          ><br />
+          <strong>Website:</strong>
+          <a
+            href="https://prettymuchflawless.github.io/panel-guardian-info-pages/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-600 hover:underline"
+            >Website</a
+          >
+        </p>
+      </main>
+
+      <footer
+        class="mt-10 pt-6 border-t border-gray-200 text-center text-sm text-gray-500"
+      >
+        &copy; 2025 Panel Guardian. All rights reserved.
+      </footer>
+    </div>
+
+    <script>
+      const form = document.getElementById("deletionForm");
+      const username = document.getElementById("username");
+      const usernameError = document.getElementById("usernameError");
+      const requestMessage = document.getElementById("requestMessage");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const value = username.value.trim();
+
+        if (!value) {
+          usernameError.classList.remove("hidden");
+          username.setAttribute("aria-invalid", "true");
+          username.focus();
+          requestMessage.classList.add("hidden");
+          return;
+        }
+
+        usernameError.classList.add("hidden");
+        username.removeAttribute("aria-invalid");
+        requestMessage.classList.remove("hidden");
+        requestMessage.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    </script>
+  </body>
+</html>
