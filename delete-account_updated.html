@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -17,213 +17,152 @@
       }
     </style>
   </head>
-  <body class="bg-gray-100 text-gray-800 min-h-screen p-4">
-    <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-2xl p-8 md:p-12">
-      <!-- Top deletion request section -->
-      <section
-        class="mb-10 border-2 border-red-200 bg-red-50 rounded-xl p-6"
-        aria-labelledby="delete-heading"
-      >
-        <h1
-          id="delete-heading"
-          class="text-3xl md:text-4xl font-extrabold text-red-700 mb-3"
-        >
-          Request Account Deletion
-        </h1>
+  <body
+    class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen p-4"
+  >
+    <div class="max-w-3xl w-full bg-white rounded-xl shadow-2xl p-8 md:p-12">
+      <!-- Top request box -->
+      <section class="mb-10">
+        <div class="rounded-xl border-2 border-red-200 bg-red-50 p-6">
+          <h1 class="text-3xl md:text-4xl font-extrabold text-red-700 mb-3">
+            Request Account Deletion
+          </h1>
+          <p class="text-gray-700 mb-4">
+            Enter your username below to begin the account deletion process.
+          </p>
 
-        <p class="text-gray-700 mb-4">
-          Enter your username below and press the button to start your account
-          deletion request.
-        </p>
+          <div class="space-y-3 mb-5">
+            <div class="rounded-lg border border-red-200 bg-white p-3 text-sm text-red-800">
+              <strong>Warning:</strong> Account deletion may permanently remove
+              your access to Panel Guardian and related account information.
+            </div>
+            <div class="rounded-lg border border-yellow-300 bg-yellow-50 p-3 text-sm text-yellow-900">
+              <strong>Important:</strong> Only the account owner should submit a
+              deletion request.
+            </div>
+            <div class="rounded-lg border border-orange-300 bg-orange-50 p-3 text-sm text-orange-900">
+              <strong>Notice:</strong> Please make sure your username is entered
+              correctly before continuing.
+            </div>
+          </div>
 
-        <div class="space-y-3 mb-5">
-          <div class="rounded-lg border border-red-200 bg-white p-3 text-sm text-red-800">
-            <strong>Warning:</strong> Account deletion may be permanent and may
-            result in the loss of access to your account, device associations,
-            settings, alerts, and historical records.
-          </div>
-          <div class="rounded-lg border border-yellow-300 bg-yellow-50 p-3 text-sm text-yellow-900">
-            <strong>Notice:</strong> Only the authorized account owner should
-            request deletion.
-          </div>
-          <div class="rounded-lg border border-orange-300 bg-orange-50 p-3 text-sm text-orange-900">
-            <strong>Important:</strong> Review your username carefully before
-            submitting your request.
-          </div>
-        </div>
+          <form id="deleteForm" class="space-y-4" novalidate>
+            <div>
+              <label
+                for="username"
+                class="block text-sm font-semibold text-gray-700 mb-2"
+              >
+                Username
+              </label>
+              <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="Enter your username"
+                autocomplete="username"
+                required
+                class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
+              />
+              <p
+                id="usernameError"
+                class="hidden mt-2 text-sm text-red-700 font-medium"
+                role="alert"
+              >
+                Please enter your username before continuing.
+              </p>
+            </div>
 
-        <form id="deleteForm" class="space-y-4" novalidate>
-          <div>
-            <label for="username" class="block text-sm font-semibold text-gray-700 mb-2">
-              Username
-            </label>
-            <input
-              id="username"
-              name="username"
-              type="text"
-              placeholder="Enter your username"
-              autocomplete="username"
-              required
-              class="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500"
-              aria-describedby="usernameError"
-            />
-            <p
-              id="usernameError"
-              class="hidden mt-2 text-sm text-red-700 font-medium"
-              role="alert"
+            <button
+              type="submit"
+              class="rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-3 transition"
             >
-              Please enter your username before continuing.
-            </p>
-          </div>
-
-          <button
-            type="submit"
-            class="inline-flex items-center justify-center rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-3 transition"
-          >
-            Start Account Deletion
-          </button>
-        </form>
+              Start Account Deletion
+            </button>
+          </form>
+        </div>
       </section>
 
-      <!-- Hidden section shown after submit -->
-      <section
-        id="followupSection"
-        class="hidden"
-        aria-labelledby="followup-heading"
-      >
-        <div
-          class="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-5"
-          role="status"
-          aria-live="polite"
-          aria-atomic="true"
-        >
-          <h2
-            id="followup-heading"
-            class="text-2xl font-bold text-blue-700 mb-2"
-          >
-            Follow the steps below
-          </h2>
-          <p class="text-blue-900 font-semibold mb-3">
-            We are working on deleting the account. Please follow the steps below.
-          </p>
-          <ol class="list-decimal pl-5 space-y-2 text-sm text-blue-900">
-            <li>Make sure the username you entered is correct.</li>
-            <li>Watch for any follow-up contact if account verification is required.</li>
-            <li>Do not create another account while this request is under review.</li>
-            <li>Contact support immediately if you submitted this request by mistake.</li>
-          </ol>
-        </div>
-
-        <!-- Original page copy below -->
+      <!-- Hidden deletion steps section -->
+      <section id="stepsSection" class="hidden">
         <header class="text-center mb-10">
           <h2 class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-2">
             Panel Guardian
           </h2>
-          <h3 class="text-2xl font-semibold text-gray-700">Privacy Policy</h3>
+          <h3 class="text-2xl font-semibold text-gray-700">
+            Account Deletion Steps
+          </h3>
           <p class="text-sm text-gray-500 mt-2">Last Updated: August 9, 2025</p>
         </header>
 
         <main class="space-y-8 prose prose-blue max-w-none">
-          <p class="text-lg text-gray-600">
-            This Privacy Policy describes how Panel Guardian ("we," "us," or
-            "our") collects, uses, and discloses information in connection with
-            your use of the Panel Guardian mobile application ("the App").
-          </p>
-          <p class="text-lg text-gray-600">
-            We take your privacy very seriously. Our App is designed solely to
-            display data from your connected panel system.
+          <div
+            class="rounded-xl border border-blue-200 bg-blue-50 p-5 text-blue-900"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <p class="text-lg font-semibold">
+              We are working on deleting the account. Please follow the steps below.
+            </p>
+          </div>
+
+          <h3 class="text-2xl font-bold text-gray-700">
+            1. Submit Your Username
+          </h3>
+          <p>
+            Enter the username associated with the account you want to delete and
+            press the account deletion button above.
           </p>
 
           <h3 class="text-2xl font-bold text-gray-700">
-            1. Information We Collect
+            2. Verify Your Request
           </h3>
-          <p>The App does not collect any personal information from you.</p>
           <p>
-            All panel status updates, sensor readings originate from your IoT
-            device.
-          </p>
-          <p>
-            That data is transmitted by your device to our backend on AWS. The App
-            fetches this information securely from AWS and displays it to you.
-          </p>
-          <p>
-            The App may require access to your local network to establish outbound
-            HTTPS connections to AWS. No data is sent directly to us from within
-            the App.
+            Make sure the username entered is correct. Incorrect usernames may
+            delay or prevent processing of your deletion request.
           </p>
 
           <h3 class="text-2xl font-bold text-gray-700">
-            2. How We Use Information
+            3. Watch for Follow-Up Contact
           </h3>
           <p>
-            We use the data retrieved from AWS only to present real-time status
-            and historical readings of your panel system.
-          </p>
-          <p>
-            We do not analyze, aggregate, or share your data for any other
-            purpose.
+            In some cases, we may need to verify that you are the account owner
+            before continuing with deletion.
           </p>
 
           <h3 class="text-2xl font-bold text-gray-700">
-            3. Data Storage and Security
+            4. Understand the Consequences
           </h3>
           <p>
-            Your IoT device pushes data to our AWS infrastructure. That data is
-            stored in encrypted form at rest.
-          </p>
-          <p>All communications between the App and AWS occur over HTTPS/TLS.</p>
-
-          <h3 class="text-2xl font-bold text-gray-700">
-            4. SMS Notifications and Phone Number Privacy
-          </h3>
-          <p>
-            When you opt in to receive SMS notifications by providing your mobile
-            phone number and checking the consent checkbox during account
-            creation, we collect only your phone number for the purpose of sending
-            Panel Guardian device alerts.
+            Deleting your account may permanently remove access to account data,
+            settings, alerts, device associations, and related records.
           </p>
           <p>
-            We do <strong>not</strong> share, sell, rent, distribute, or trade
-            your phone number or SMS opt-in consent data with any third parties
-            for marketing, advertising, or any other purpose. Your phone number is
-            used solely to deliver transactional alerts from the Panel Guardian
-            service and will never be shared with affiliates or third parties
-            except as required by law.
+            Some information may be retained where required by law, security,
+            fraud prevention, or operational recordkeeping.
           </p>
 
           <h3 class="text-2xl font-bold text-gray-700">
-            5. Third-Party Services
+            5. Do Not Create Another Account Yet
           </h3>
           <p>
-            We rely on Amazon Web Services (AWS) to host, store, and serve your
-            panel data.
-          </p>
-          <p>
-            The App does not use any third-party analytics, advertising, or
-            data-collection services.
-          </p>
-
-          <h3 class="text-2xl font-bold text-gray-700">6. Your Consent</h3>
-          <p>
-            By using the Panel Guardian App, you consent to this Privacy Policy.
-            If you do not agree with these terms, please discontinue use of the
-            App.
+            Please do not create another account while your deletion request is
+            being reviewed or processed.
           </p>
 
           <h3 class="text-2xl font-bold text-gray-700">
-            7. Changes to this Privacy Policy
+            6. Contact Us if Needed
           </h3>
           <p>
-            We may update this Privacy Policy from time to time. We will notify
-            you of significant changes by posting the new Privacy Policy within
-            the App or on our website. You are advised to review this Policy
-            periodically.
+            If you submitted the deletion request in error or need help with the
+            process, contact us as soon as possible.
           </p>
 
-          <h3 class="text-2xl font-bold text-gray-700">8. Contact Us</h3>
+          <h3 class="text-2xl font-bold text-gray-700">
+            7. Contact Information
+          </h3>
           <p>
-            If you have any questions or suggestions about our Privacy Policy,
-            please contact us at:
+            If you have any questions about account deletion, please contact us at:
           </p>
           <p>
             <strong>Email:</strong>
@@ -255,23 +194,21 @@
       const form = document.getElementById("deleteForm");
       const username = document.getElementById("username");
       const usernameError = document.getElementById("usernameError");
-      const followupSection = document.getElementById("followupSection");
+      const stepsSection = document.getElementById("stepsSection");
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
 
         if (!username.value.trim()) {
           usernameError.classList.remove("hidden");
-          username.setAttribute("aria-invalid", "true");
           username.focus();
-          followupSection.classList.add("hidden");
+          stepsSection.classList.add("hidden");
           return;
         }
 
         usernameError.classList.add("hidden");
-        username.removeAttribute("aria-invalid");
-        followupSection.classList.remove("hidden");
-        followupSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        stepsSection.classList.remove("hidden");
+        stepsSection.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     </script>
   </body>
