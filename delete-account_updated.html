@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -21,13 +21,17 @@
     class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen p-4"
   >
     <div class="max-w-3xl w-full bg-white rounded-xl shadow-2xl p-8 md:p-12">
-      <!-- Top request box -->
-      <section class="mb-10">
-        <div class="rounded-xl border-2 border-red-200 bg-red-50 p-6">
-          <h1 class="text-3xl md:text-4xl font-extrabold text-red-700 mb-3">
-            Request Account Deletion
-          </h1>
-          <p class="text-gray-700 mb-4">
+      <header class="text-center mb-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-2">
+          Panel Guardian
+        </h1>
+        <h2 class="text-2xl font-semibold text-gray-700">Delete Account</h2>
+        <p class="text-sm text-gray-500 mt-2">Last Updated: August 9, 2025</p>
+      </header>
+
+      <main class="space-y-8 max-w-none">
+        <section class="rounded-xl border-2 border-red-200 bg-red-50 p-6">
+          <p class="text-lg text-gray-700 mb-4">
             Enter your username below to begin the account deletion process.
           </p>
 
@@ -79,136 +83,54 @@
               Start Account Deletion
             </button>
           </form>
-        </div>
-      </section>
 
-      <!-- Hidden deletion steps section -->
-      <section id="stepsSection" class="hidden">
-        <header class="text-center mb-10">
-          <h2 class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-2">
-            Panel Guardian
-          </h2>
-          <h3 class="text-2xl font-semibold text-gray-700">
-            Account Deletion Steps
-          </h3>
-          <p class="text-sm text-gray-500 mt-2">Last Updated: August 9, 2025</p>
-        </header>
-
-        <main class="space-y-8 prose prose-blue max-w-none">
           <div
-            class="rounded-xl border border-blue-200 bg-blue-50 p-5 text-blue-900"
+            id="resultMessage"
+            class="hidden mt-6 rounded-lg border border-blue-200 bg-blue-50 p-4 text-blue-900"
             role="status"
             aria-live="polite"
             aria-atomic="true"
           >
-            <p class="text-lg font-semibold">
-              We are working on deleting the account. Please follow the steps below.
-            </p>
-          </div>
-
-          <h3 class="text-2xl font-bold text-gray-700">
-            1. Submit Your Username
-          </h3>
-          <p>
-            Enter the username associated with the account you want to delete and
-            press the account deletion button above.
-          </p>
-
-          <h3 class="text-2xl font-bold text-gray-700">
-            2. Verify Your Request
-          </h3>
-          <p>
-            Make sure the username entered is correct. Incorrect usernames may
-            delay or prevent processing of your deletion request.
-          </p>
-
-          <h3 class="text-2xl font-bold text-gray-700">
-            3. Watch for Follow-Up Contact
-          </h3>
-          <p>
-            In some cases, we may need to verify that you are the account owner
-            before continuing with deletion.
-          </p>
-
-          <h3 class="text-2xl font-bold text-gray-700">
-            4. Understand the Consequences
-          </h3>
-          <p>
-            Deleting your account may permanently remove access to account data,
-            settings, alerts, device associations, and related records.
-          </p>
-          <p>
-            Some information may be retained where required by law, security,
-            fraud prevention, or operational recordkeeping.
-          </p>
-
-          <h3 class="text-2xl font-bold text-gray-700">
-            5. Do Not Create Another Account Yet
-          </h3>
-          <p>
-            Please do not create another account while your deletion request is
-            being reviewed or processed.
-          </p>
-
-          <h3 class="text-2xl font-bold text-gray-700">
-            6. Contact Us if Needed
-          </h3>
-          <p>
-            If you submitted the deletion request in error or need help with the
-            process, contact us as soon as possible.
-          </p>
-
-          <h3 class="text-2xl font-bold text-gray-700">
-            7. Contact Information
-          </h3>
-          <p>
-            If you have any questions about account deletion, please contact us at:
-          </p>
-          <p>
-            <strong>Email:</strong>
+            To speed up deletion time please follow the instruction provided in
+            the link:
             <a
-              href="mailto:panelguardianalerts@gmail.com"
-              class="text-blue-600 hover:underline"
-              >panelguardianalerts@gmail.com</a
-            ><br />
-            <strong>Website:</strong>
-            <a
-              href="https://prettymuchflawless.github.io/panel-guardian-info-pages/"
+              href="https://prettymuchflawless.github.io/panel-guardian-info-pages/delete-account.html"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-blue-600 hover:underline"
-              >Website</a
+              class="font-semibold text-blue-700 underline hover:text-blue-900"
             >
-          </p>
-        </main>
+              Delete Account Instructions
+            </a>
+          </div>
+        </section>
+      </main>
 
-        <footer
-          class="mt-10 pt-6 border-t border-gray-200 text-center text-sm text-gray-500"
-        >
-          &copy; 2025 Panel Guardian. All rights reserved.
-        </footer>
-      </section>
+      <footer
+        class="mt-10 pt-6 border-t border-gray-200 text-center text-sm text-gray-500"
+      >
+        &copy; 2025 Panel Guardian. All rights reserved.
+      </footer>
     </div>
 
     <script>
       const form = document.getElementById("deleteForm");
       const username = document.getElementById("username");
       const usernameError = document.getElementById("usernameError");
-      const stepsSection = document.getElementById("stepsSection");
+      const resultMessage = document.getElementById("resultMessage");
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
 
         if (!username.value.trim()) {
           usernameError.classList.remove("hidden");
+          resultMessage.classList.add("hidden");
           username.focus();
-          stepsSection.classList.add("hidden");
           return;
         }
 
         usernameError.classList.add("hidden");
-        stepsSection.classList.remove("hidden");
-        stepsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        resultMessage.classList.remove("hidden");
+        resultMessage.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     </script>
   </body>
